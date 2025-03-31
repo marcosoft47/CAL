@@ -25,7 +25,7 @@ def pesqSeq(lista: list, valorProcurado: int, pos: int, contador: int)-> tuple[i
         print('Valor não existe na lista')
         return (-1,-1)
     if lista[pos] == valorProcurado:
-        return (contador, contador-1)
+        return (contador, pos)
     return pesqSeq(lista, valorProcurado, pos+1, contador)
 
 # def genList(size: int, max: int):
@@ -35,10 +35,8 @@ def pesqSeq(lista: list, valorProcurado: int, pos: int, contador: int)-> tuple[i
 #     lista.sort()
 #     print(lista)
 
-# genList(50,1000)
-lista = [8, 63, 116, 132, 159, 183, 223, 237, 259, 319, 321, 324, 345, 354, 361, 367, 376,
-         377, 396, 405, 474, 526, 527, 539, 562, 564, 596, 640, 663, 665, 677, 704, 729, 754,
-         754, 758, 785, 788, 790, 800, 836, 844, 856, 902, 902, 914, 932, 937, 949, 966]
+# genList(100,1000)
+lista = [1, 23, 39, 43, 57, 94, 103, 104, 109, 110, 118, 119, 129, 150, 152, 156, 157, 172, 180, 181, 188, 189, 197, 215, 216, 219, 220, 223, 247, 294, 311, 312, 317, 324, 331, 356, 360, 366, 389, 395, 396, 397, 415, 425, 437, 448, 450, 461, 482, 491, 495, 505, 512, 513, 548, 562, 566, 586, 588, 594, 596, 614, 618, 632, 640, 648, 665, 669, 713, 717, 720, 723, 729, 740, 743, 771, 780, 791, 815, 841, 842, 848, 881, 882, 883, 912, 917, 926, 928, 942, 947, 950, 961, 965, 968, 975, 976, 985, 994, 997]
 
 somaBin = 0
 somaSeq = 0
