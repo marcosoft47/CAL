@@ -43,28 +43,20 @@ int isSafe(int maze[N][N], int x, int y) {
 int solveMazeUtil(int maze[N][N], int x, int y) {
     
     maze[x][y] = 2;
-    if (isSafe(maze,x,y+1)){ // Cima
-        if (solveMazeUtil(maze,x,y+1)){
-            return 1;
-        }
+    if (isSafe(maze,x,y+1) && solveMazeUtil(maze,x,y+1)){ // Cima
+        return 1;
     }
 
-    if (isSafe(maze,x+1,y)){ // Direita
-        if (solveMazeUtil(maze,x+1,y)){
-            return 1;
-        }
+    if (isSafe(maze,x+1,y) && solveMazeUtil(maze,x+1,y)){ // Direita
+        return 1;
     }
 
-    if (isSafe(maze,x,y-1)){ // Baixo
-        if (solveMazeUtil(maze,x,y-1)){
-            return 1;
-        }
+    if (isSafe(maze,x,y-1) && solveMazeUtil(maze,x,y-1)){ // Baixo
+        return 1;
     }
 
-    if (isSafe(maze,x-1,y)){ // Esquerda
-        if (solveMazeUtil(maze,x-1,y)){
-            return 1;
-        }
+    if (isSafe(maze,x-1,y) && solveMazeUtil(maze,x-1,y)){ // Esquerda
+        return 1;
     }
 
     // printMaze(maze);
