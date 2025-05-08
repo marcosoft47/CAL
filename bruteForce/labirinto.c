@@ -5,7 +5,7 @@
 #define N 61
 // #define N 10
 #define PAREDE "#"
-#define CAMINHO "o"
+#define CAMINHO "x"
 
 
 
